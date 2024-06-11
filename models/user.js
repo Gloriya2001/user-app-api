@@ -2,17 +2,17 @@ const mongoose = require("mongoose")
 const schema = mongoose.Schema(
     {
 
-        "name": String,
-        "dob": String,
-        "bloodgp": String,
-        "mobNum": String,
-        "address": String,
-        "pin": String,
-        "district": String,
-        "place": String,
-        "email": String,
-        "userName": String,
-        "password": String
+        "name":{type:String,required:true},
+        "dob":{type:String,required:true},
+        "bloodgp":{type:String,required:true},
+        "mobNum":{type:String,required:true},
+        "address":{type:String,required:true},
+        "pin":{type:String,required:true},
+        "district":{type:String,required:true},
+        "place":{type:String,required:true},
+        "email":{type:String,required:true},
+        "userName":{type:String,required:true},
+        "password":{type:String,required:true}
 
     }
 )
