@@ -4,6 +4,8 @@ const cors = require("cors")
 const {usermodel} = require("./models/user")
 
 
+mongoose.connect("mongodb+srv://gloria2001:gloria2001@cluster0.ipg35w1.mongodb.net/userDB?retryWrites=true&w=majority&appName=Cluster0")
+
 const app = express()
 app.use(cors())
 app.use(express.json())
@@ -22,7 +24,16 @@ app.post("/add", (req, res) => {
 
 app.get("/view", (req, res) => {
 
-    res.send("view")
+    //res.send("view")
+    usermodel.find().then(
+
+        (data) => {
+                res.json(data)
+        }
+
+    ).catch()
+
+
 
 })
 
